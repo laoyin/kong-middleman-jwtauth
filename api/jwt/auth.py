@@ -90,7 +90,7 @@ class JWtAuthentication(object):
 
     @staticmethod
     def validate_token(request):
-        token = request.META.get("HTTP_X_SUBJECT_TOKEN", "")
+        token = request.META.get("HTTP_X_SUBJECT_TOKEN","")
         toke_status, ucmp_user  = JwtHelper.validate(token)
         return toke_status, ucmp_user
 

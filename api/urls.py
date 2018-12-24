@@ -11,9 +11,9 @@ from api.jwt.api_handler import (
 
 urlpatterns = [
     url(
-        r'^machines/(?P<system_id>[^/]+)/$', jwt_handler,
+        r'^jwt/(?P<system_id>[^/]+)/$', jwt_handler,
         name='jwt_handler'),
-    url(r'^machines/$', user_handler, name='user_handler'),
+    url(r'^token/$', user_handler, name='user_handler'),
 ]
 
 # Last resort: return an API 404 response.
